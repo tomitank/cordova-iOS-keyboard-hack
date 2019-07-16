@@ -41,6 +41,14 @@
 					var scroll = Math.max(bottom - title_height - max_height, 0);
 
 					$(content_id).stop().animate({scrollTop: scroll}, 200, function() {
+						var selStart = input.selectionStart,
+							selEnd = input.selectionEnd;
+						input.selectionStart = 0;
+						input.selectionEnd = 0;
+						setTimeout(function() {
+							input.selectionStart = selStart;
+							input.selectionEnd = selEnd;
+						}, 33);
 						input.focus();
 					});
 				}
