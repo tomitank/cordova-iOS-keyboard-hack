@@ -1,5 +1,17 @@
 		function onDeviceReady() {			
-      
+
+			// V1
+			cordova.plugins.Keyboard.disableScroll(false);
+			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
+
+			window.addEventListener('native.keyboardhide', function() {
+				var input = document.querySelector(":focus");
+				if (!input || input.localName != 'input') {
+					window.scrollTo(0, 0);
+				}
+			});
+
+			// V2
       			var content_id = null;
 			cordova.plugins.Keyboard.disableScroll(true);
 			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
