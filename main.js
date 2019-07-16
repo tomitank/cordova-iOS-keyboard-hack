@@ -40,7 +40,7 @@
 
 					var scroll = Math.max(bottom - title_height - max_height, 0);
 
-					$(content_id).stop().animate({scrollTop: scroll}, 150, function() {
+					$(content_id).stop().animate({scrollTop: scroll}, 200, function() {
 						input.focus();
 					});
 				}
