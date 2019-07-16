@@ -1,6 +1,6 @@
 		function onDeviceReady() {			
       
-      var content_id = null;
+      			var content_id = null;
 			cordova.plugins.Keyboard.disableScroll(true);
 			cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
 
