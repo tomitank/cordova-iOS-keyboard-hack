@@ -6,7 +6,7 @@
 
 			window.addEventListener('native.keyboardhide', function() {
 				var input = document.querySelector(":focus");
-				if (!input || input.localName != 'input') {
+				if (input == null || input.localName != 'input') {
 					window.scrollTo(0, 0);
 				}
 			});
